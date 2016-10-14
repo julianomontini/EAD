@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EAD</string>
+    <string name="cadastrar">Register</string>
+    <string name="confirmar">Confirm</string>
+    <string name="cpf"></string>
+    <string name="enviar">Send</string>
+    <string name="esqueci_minha_senha">Forgot my password</string>
+    <string name="insira_seu_email_abaixo">Insert your email below</string>
+    <string name="senha">Password</string>
+    <string name="telefone_celular">Phone</string>
+    <string name="termos_de_uso_e_pol_tica_de_privacidade">Use terms and privacy policy</string>
+    <string name="para_reiniciar_a_senha">to reset the password</string>
+    <string name="nome_completo">Full name</string>
+</resources>

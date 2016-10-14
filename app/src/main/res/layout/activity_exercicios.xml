@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/texto_exercicios"
+            style="@style/TextHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exercícios"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                style="@style/TextHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="Questão "/>
+            <TextView
+                android:id="@+id/numero_exercicio"
+                style="@style/TextHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/questao_exercicio"
+            style="@style/TextGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Na década de 1970, a população brasileira era predominantemente urbana. Um dos fatores que contribuíram pra isso foi: "/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/questao_1"
+                style="@style/TextGlobal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A apropriação de tecnologia avançada"/>
+
+            <RadioButton
+                android:id="@+id/questao_2"
+                style="@style/TextGlobal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surgimento de atividades e serviços"/>
+
+            <RadioButton
+                android:id="@+id/questao_3"
+                style="@style/TextGlobal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diversificação do mercado urbano"/>
+
+            <RadioButton
+                android:id="@+id/questao_4"
+                style="@style/TextGlobal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deslocamento da população rural para as cidades"/>
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_alignParentStart="true"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/previous"
+                android:clickable="true"
+                android:onClick="voltaExerc"/>
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/next"
+                android:clickable="true"
+                android:onClick="avancaExerc"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

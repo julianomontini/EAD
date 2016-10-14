@@ -1,0 +1,112 @@
+package julianomontini.ead;
+
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class ActivityMostrarCursos extends AppCompatActivity {
+
+    Integer convert;
+    int icone;
+    String materia, descricao;
+
+    Map materias = new HashMap();
+    Map icones = new HashMap();
+    Map descricoes = new HashMap();
+
+    int mIdUsuario;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cursos_disponiveis);
+
+        mIdUsuario = (int)getIntent().getSerializableExtra("IdUsuario");
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        criarLista();
+    }
+
+    private void criarLista() {
+
+        final List<EncapsulaInfoCurso> informacoes = new ArrayList<>();
+
+        try{
+
+            SQLiteDatabase myDatabase = this.openOrCreateDatabase("Schema", MODE_PRIVATE, null);
+            Cursor c = myDatabase.rawQuery("SELECT * FROM curso WHERE ID NOT IN(SELECT n_curso FROM usuario_curso WHERE n_usuario = " + mIdUsuario + ")",null);
+            int indexNome,indexDesc,indexImg,indexId;
+
+            indexNome = c.getColumnIndex("nome");
+            indexDesc = c.getColumnIndex("descricao");
+            indexImg = c.getColumnIndex("imagem");
+            indexId = c.getColumnIndex("ID");
+
+            if(c.getCount() == 0){
+
+                Toast.makeText(ActivityMostrarCursos.this,"Não existem mais cursos",Toast.LENGTH_LONG).show();
+
+            }
+
+            c.moveToFirst();
+
+            while(!c.isAfterLast()){
+                String nome = c.getString(indexNome);
+                String desc = c.getString(indexDesc);
+                int img = c.getInt(indexImg);
+                int id = c.getInt(indexId);
+                informacoes.add(new EncapsulaInfoCurso(nome,desc,img,id));
+                c.moveToNext();
+            }
+        }
+        catch (Exception e){
+
+            Log.i("ERROOOOOO", e.getMessage());
+
+        }
+
+        ListAdapter adapterBotoes = new AdapterBotoes(this, informacoes);
+        ListView listBotoes = (ListView) findViewById(R.id.listBotoes);
+
+        listBotoes.setAdapter(adapterBotoes);
+
+        listBotoes.setOnItemClickListener(
+
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        EncapsulaInfoCurso displayInfo = informacoes.get(position);
+
+                        Intent i = new Intent(ActivityMostrarCursos.this, ActivityInformacoesCurso.class);
+                        i.putExtra("id", displayInfo);
+                        i.putExtra("IdUsuario",mIdUsuario);
+                        startActivity(i);
+
+                    }
+                }
+
+        );
+
+    }
+
+
+}

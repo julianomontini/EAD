@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorPrimary"
+                  android:gravity="center_vertical"
+                  android:orientation="vertical"
+                  android:paddingLeft="30dp"
+                  android:paddingRight="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                style="@style/TextHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/cadastrar"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/nome_cadastro"
+            style="@style/InputStyleGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:hint="@string/nome_completo"/>
+
+        <EditText
+            android:id="@+id/email_cadastro"
+            style="@style/InputStyleGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/senha_cadastro"
+            style="@style/InputStyleGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/senha"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/conf_senha"
+            style="@style/InputStyleGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/confirmar"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/telefone_cadastro"
+            style="@style/InputStyleGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/telefone_celular"/>
+
+        <EditText
+            android:id="@+id/cpf_cadastro"
+            style="@style/InputStyleGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/cpf"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/check_cadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/TextGlobal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/termos_de_uso_e_pol_tica_de_privacidade"/>
+
+        </LinearLayout>
+
+        <Button
+            style="@style/ButtonStyleGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:onClick="efetuarCadastro"
+            android:text="@string/confirmar"/>
+
+    </LinearLayout>
+
+</ScrollView>

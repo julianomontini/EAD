@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">SES</string>
+    <string name="title_activity_visao_geral">VisaoGeral</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="e_mail" translatable="false">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="login" translatable="false">LOGIN</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="telefone_celular">Telefone/Celular</string>
+    <string name="cpf" translatable="false">CPF</string>
+    <string name="termos_de_uso_e_pol_tica_de_privacidade">Termos de uso e política de privacidade</string>
+    <string name="insira_seu_email_abaixo">Insira seu email abaixo para recuperar a senha</string>
+    <string name="para_reiniciar_a_senha">para reiniciar a senha</string>
+    <string name="enviar">Enviar</string>
+    <string name="bem_vindo">Bem-vindo</string>
+    <string name="clique_opcao">Clique na opção desejada:</string>
+    <string name="exerc_cios">Exercícios</string>
+    <string name="cursos">Cursos</string>
+    <string name="customizar">Customizar</string>
+    <string name="desempenho">Desempenho</string>
+    <string name="configura_es">Configurações</string>
+    <string name="matematica">Matemática</string>
+    <string name="geografica">Geografia</string>
+    <string name="historia">História</string>
+    <string name="ingles">Inglês</string>
+    <string name="espanhol">Espanhol</string>
+    <string name="matematica_dec">A matemática é a ciência do raciocinio lógico e abstrato, que estuda quantidades, medidas, espaços, estruturas, variações e estatísticas.</string>
+    <string name="geografia_desc">A geografia é a ciencia que estuda o conjunto de fenômenos naturais e humanos, os quais são aspectos da superfície da Terra, considerada na sua distribuição e relações recíprocas.</string>
+    <string name="historia_desc">História é a ciência que estuda o Homem e a sua ação no tempo e no espaço, concomitante à análise de processos e eventos ocorridos no passado</string>
+    <string name="ingles_desc">O idioma é o mais usado no mundo em publicações de jornais e livros, na publicação científica. no comércio internacional, no entretenimento de massa e na diplomacia</string>
+    <string name="espanhol_desc">A língua espanhola é o idioma da Espanha, e de vários países da América Latina. Conta com cerca de duzentos e cinquenta milhões de falantes. Também é chamada de \'\'Castelhano\'\'</string>
+    <string name="hist_quest1">"Na década de 1970, a população brasileira era predominantemente urbana. Um dos fatores que contribuíram pra isso foi: "</string>
+    <string name="hist_opc1">A apropriação de tecnologia avançada</string>
+    <string name="hist_opc2">Surgimento de atividades e serviços</string>
+    <string name="hist_opc3">Diversificação do mercado urbano</string>
+    <string name="hist_opc4">Deslocamento da população rural para as cidades</string>
+    <string name="hist_quest2">Quem descobriu o Brasil?</string>
+    <string name="hist_opc_2_1">Pedrinho</string>
+    <string name="hist_opc_2_2">Joaozinho</string>
+    <string name="hist_opc_2_3">Pedro Cabral</string>
+    <string name="hist_opc_2_4">Maria</string>
+</resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorPrimaryDark"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <TextView
+        android:id="@+id/desempenho_materias"
+        style="@style/TextHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Matemática"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Acertos: "
+            android:textAlignment="textStart"/>
+
+        <TextView
+            android:id="@+id/desempenho_acertos"
+            style="@style/TextGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="25"
+            android:textAlignment="textStart"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Erros: "
+            android:textAlignment="textStart"/>
+
+        <TextView
+            android:id="@+id/desempenho_erros"
+            style="@style/TextGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="7"
+            android:textAlignment="textStart"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Total respondido: "
+            android:textAlignment="textStart"/>
+
+        <TextView
+            android:id="@+id/desempenho_respondidos"
+            style="@style/TextGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="32"
+            android:textAlignment="textStart"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Total Questões: "
+            android:textAlignment="textStart"/>
+
+        <TextView
+            android:id="@+id/desempenho_total"
+            style="@style/TextGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="100"
+            android:textAlignment="textStart"/>
+
+    </LinearLayout>
+
+</LinearLayout>
