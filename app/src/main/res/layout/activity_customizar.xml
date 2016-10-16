@@ -36,160 +36,95 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Cor do texto"
+            android:text="Tema"
             android:textAlignment="center"/>
 
-        <TableRow
+        <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/white"/>
+                <RadioButton
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextGlobal"/>
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/aqua"/>
+                <ImageView
+                    android:layout_marginStart="15dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimary"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimaryDark"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/white"/>
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/green"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        </TableRow>
+                <RadioButton
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextGlobal"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
+                <ImageView
+                    android:layout_marginStart="15dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/teal"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/md_teal_700"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/md_amber_500"/>
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/maroon"/>
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/yellow"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/navy"/>
+                <RadioButton
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextGlobal"/>
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/gray"/>
+                <ImageView
+                    android:layout_marginStart="15dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/md_blue_grey_500"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/md_blue_grey_700"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/md_green_500"/>
 
-        </TableRow>
+            </LinearLayout>
 
-        <TextView
-            style="@style/TextHeader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Cor de fundo"
-            android:textAlignment="center"/>
+        </RadioGroup>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/black"/>
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/white"/>
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/aqua"/>
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/green"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/maroon"/>
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/yellow"/>
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/navy"/>
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:background="@color/gray"/>
-
-        </TableRow>
 
 
         <CheckBox
