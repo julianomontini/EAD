@@ -1,5 +1,7 @@
 package julianomontini.ead;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -59,7 +61,17 @@ public class ActivityCursosCadastrados extends AppCompatActivity {
 
             if(c.getCount() == 0){
 
-                Toast.makeText(ActivityCursosCadastrados.this,"Não ha cursos cadastrados",Toast.LENGTH_LONG).show();
+                new AlertDialog.Builder(ActivityCursosCadastrados.this)
+                        .setTitle("Aviso")
+                        .setMessage("Não há cursos cadastrados")
+
+                        .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
 
             }
 
@@ -167,14 +179,24 @@ E
 
                             try {
 
+
                                 SQLiteDatabase myDatabase = getApplicationContext().openOrCreateDatabase("Schema", MODE_PRIVATE, null);
 
 
                                 myDatabase.execSQL("DELETE FROM usuario_curso WHERE n_curso = " + exercicio.getIDCurso() + " AND n_usuario = " + mIdUsuario);
 
 
-                                Toast.makeText(getApplicationContext(),"Curso Desmatriculado",Toast.LENGTH_LONG).show();
-                                recreate();
+                                new AlertDialog.Builder(ActivityCursosCadastrados.this)
+                                        .setTitle("Aviso")
+                                        .setMessage("Curso Desmatriculado")
+
+                                        .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                recreate();
+                                            }
+                                        })
+                                        .setIcon(android.R.drawable.ic_dialog_alert)
+                                        .show();
 
                             }catch (Exception e){
 

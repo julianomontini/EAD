@@ -1,5 +1,7 @@
 package julianomontini.ead;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -53,18 +55,29 @@ public class ActivityMostrarCursos extends AppCompatActivity {
 
             SQLiteDatabase myDatabase = this.openOrCreateDatabase("Schema", MODE_PRIVATE, null);
             Cursor c = myDatabase.rawQuery("SELECT * FROM curso WHERE ID NOT IN(SELECT n_curso FROM usuario_curso WHERE n_usuario = " + mIdUsuario + ")",null);
+
+            if(c.getCount() == 0){
+
+                new AlertDialog.Builder(ActivityMostrarCursos.this)
+                        .setTitle("Aviso")
+                        .setMessage("Todos os exercicios já estão cadastrados")
+
+                        .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+
+            }
+
             int indexNome,indexDesc,indexImg,indexId;
 
             indexNome = c.getColumnIndex("nome");
             indexDesc = c.getColumnIndex("descricao");
             indexImg = c.getColumnIndex("imagem");
             indexId = c.getColumnIndex("ID");
-
-            if(c.getCount() == 0){
-
-                Toast.makeText(ActivityMostrarCursos.this,"Não existem mais cursos",Toast.LENGTH_LONG).show();
-
-            }
 
             c.moveToFirst();
 

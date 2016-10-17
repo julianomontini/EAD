@@ -1,6 +1,8 @@
 package julianomontini.ead;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -63,7 +65,17 @@ public class ActivityExercicio extends AppCompatActivity {
 
         }else{
 
-            Toast.makeText(ActivityExercicio.this,"Esse é o ultimo exercicio",Toast.LENGTH_LONG).show();
+            new AlertDialog.Builder(ActivityExercicio.this)
+                    .setTitle("Aviso")
+                    .setMessage("Esse é o primeiro exercício")
+
+                    .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
 
         }
 
@@ -75,7 +87,17 @@ public class ActivityExercicio extends AppCompatActivity {
 
         if(mPosicao == 0){
 
-            Toast.makeText(ActivityExercicio.this,"Esse é o primeiro exercicio",Toast.LENGTH_LONG).show();
+            new AlertDialog.Builder(ActivityExercicio.this)
+                    .setTitle("Aviso")
+                    .setMessage("Esse é o primeiro exercício")
+
+                    .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
 
         }
         else{
@@ -107,12 +129,12 @@ public class ActivityExercicio extends AppCompatActivity {
 
         if(marcada == mInformacoes.getCerta()){
 
-            Toast.makeText(ActivityExercicio.this,"Resposta correta!",Toast.LENGTH_LONG).show();
+            Toast.makeText(ActivityExercicio.this,"Resposta Correta",Toast.LENGTH_LONG).show();
             status = 1;
 
         }else if(marcada != 5){
 
-            Toast.makeText(ActivityExercicio.this,"Resposta errada!",Toast.LENGTH_LONG).show();
+            Toast.makeText(ActivityExercicio.this,"Resposta Incorreta",Toast.LENGTH_LONG).show();
             status = 2;
         }
 

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_margin="25dp"
+        android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextHeader"
+            android:textAlignment="center"
+            android:text="Alterar Senha"
+            android:layout_marginBottom="25dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextGlobal"
+            android:layout_marginBottom="25dp"
+            android:text="Para alterar a senha, basta inserir a senha antiga, a senha nova e depois confirmar a senha nova"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InputStyleGlobal"
+            android:hint="Senha Antiga"
+            android:inputType="textPassword"
+            android:layout_marginBottom="15dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InputStyleGlobal"
+            android:hint="Nova Senha"
+            android:inputType="textPassword"
+            android:layout_marginBottom="15dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InputStyleGlobal"
+            android:hint="Confirmar Senha"
+            android:inputType="textPassword"
+            android:layout_marginBottom="15dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonStyleGlobal"
+            android:layout_margin="10dp"
+            android:text="@string/confirmar"/>
+
+    </LinearLayout>
+
+</ScrollView>
+

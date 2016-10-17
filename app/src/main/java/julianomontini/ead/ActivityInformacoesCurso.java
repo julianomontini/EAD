@@ -1,5 +1,7 @@
 package julianomontini.ead;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -46,9 +48,18 @@ public class ActivityInformacoesCurso extends AppCompatActivity {
 
             myDatabase.close();
 
-            Toast.makeText(getApplicationContext(),"Curso cadastrado",Toast.LENGTH_LONG).show();
+            new AlertDialog.Builder(ActivityInformacoesCurso.this)
+                    .setTitle("Sucesso")
+                    .setMessage("Curso Matriculado")
 
-            finish();
+                    .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+
         }catch (Exception e){
 
             Log.i("ERROOOOOR",e.getMessage());

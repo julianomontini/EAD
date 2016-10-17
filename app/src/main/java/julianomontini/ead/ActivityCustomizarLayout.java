@@ -5,11 +5,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
-public class ActivityCustomizarLayout extends AppCompatActivity {
+public class ActivityCustomizarLayout extends FragmentActivity {
 
     int mIDUsuario;
 
@@ -33,6 +34,8 @@ public class ActivityCustomizarLayout extends AppCompatActivity {
                         try{
                             SQLiteDatabase myDatabase = getApplicationContext().openOrCreateDatabase("Schema",MODE_PRIVATE,null);
                             myDatabase.execSQL("DELETE FROM usuario WHERE id = "+mIDUsuario);
+                            myDatabase.execSQL("DELETE FROM usuario_curso WHERE n_usuario = "+mIDUsuario);
+                            myDatabase.execSQL("DELETE FROM usuario_exerc WHERE n_aluno = "+mIDUsuario);
                             myDatabase.close();
 
                             Intent i = getBaseContext().getPackageManager()
@@ -58,7 +61,8 @@ public class ActivityCustomizarLayout extends AppCompatActivity {
 
     public void alteraSenha(View view){
 
-
+        Intent i = new Intent(this,ActivityAlterarSenha.class);
+        startActivity(i);
 
     }
 

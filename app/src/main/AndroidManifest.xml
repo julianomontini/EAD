@@ -41,6 +41,8 @@
         </activity>
         <activity android:name=".ActivityListaExercicios">
         </activity>
+        <activity android:name=".ActivityAlterarSenha">
+        </activity>
     </application>
 
 </manifest>

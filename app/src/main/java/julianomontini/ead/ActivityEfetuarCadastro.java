@@ -69,7 +69,7 @@ public class ActivityEfetuarCadastro extends AppCompatActivity {
 
             new AlertDialog.Builder(ActivityEfetuarCadastro.this)
                     .setTitle("Sucesso")
-                    .setMessage("Cadastro efetuado com sucesso!!!")
+                    .setMessage("Cadastro efetuado com sucesso")
 
                     .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
@@ -83,13 +83,33 @@ public class ActivityEfetuarCadastro extends AppCompatActivity {
         //Trata exception de constraint
         catch (SQLiteConstraintException e){
 
-            Toast.makeText(ActivityEfetuarCadastro.this,"O email já está cadastrado",Toast.LENGTH_LONG).show();
+            new AlertDialog.Builder(ActivityEfetuarCadastro.this)
+                    .setTitle("Erro")
+                    .setMessage("O Email já está cadastrado")
+
+                    .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
 
         }
         //Trata exceptions genericas
         catch (Exception e) {
 
-            Toast.makeText(ActivityEfetuarCadastro.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            new AlertDialog.Builder(ActivityEfetuarCadastro.this)
+                    .setTitle("Erro")
+                    .setMessage("O erro: "+ e.getMessage() + " ocorreu, favor contatar o administrador")
+
+                    .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
 
         }
     }
