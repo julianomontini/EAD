@@ -1,5 +1,7 @@
 package julianomontini.ead;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -62,11 +64,20 @@ public class ActivityEfetuarCadastro extends AppCompatActivity {
                     + "'" + aluno.getCpf()   +"'"
                     + ")");
 
-            //Informa que o usuario se cadastrou com sucesso
-            Toast.makeText(ActivityEfetuarCadastro.this,"Cadastro Efetuado!", Toast.LENGTH_LONG).show();
-
             //Fecha a conexao com o banco de dados
             myDatabase.close();
+
+            new AlertDialog.Builder(ActivityEfetuarCadastro.this)
+                    .setTitle("Sucesso")
+                    .setMessage("Cadastro efetuado com sucesso!!!")
+
+                    .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
 
         }
         //Trata exception de constraint

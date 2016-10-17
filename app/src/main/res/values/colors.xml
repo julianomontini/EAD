@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#3f51b5</color>
     <color name="lightBlue">#7d87bc</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="white">#FFFFFF</color>
+    <color name="white">#ffffff</color>
     <color name="yellow">#ffea00</color>
     <color name="fuchsia">#d500f9</color>
     <color name="red">#d50000</color>
@@ -186,7 +186,7 @@
     <color name="md_light_green_200">#C5E1A5</color>
     <color name="md_light_green_300">#AED581</color>
     <color name="md_light_green_400">#9CCC65</color>
-    <color name="md_light_green_500">#8BC34A</color>
+    <color name="md_light_green_500">#8bc34a</color>
     <color name="md_light_green_600">#7CB342</color>
     <color name="md_light_green_700">#689F38</color>
     <color name="md_light_green_800">#558B2F</color>
@@ -224,7 +224,7 @@
     <color name="md_yellow_800">#F9A825</color>
     <color name="md_yellow_900">#F57F17</color>
     <color name="md_yellow_A100">#FFFF82</color>
-    <color name="md_yellow_A200">#FFFF00</color>
+    <color name="md_yellow_A200">#ffff00</color>
     <color name="md_yellow_A400">#FFEA00</color>
     <color name="md_yellow_A700">#FFD600</color>
 

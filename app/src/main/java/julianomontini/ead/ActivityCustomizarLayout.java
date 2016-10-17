@@ -1,13 +1,84 @@
 package julianomontini.ead;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
 
 public class ActivityCustomizarLayout extends AppCompatActivity {
+
+    int mIDUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customizar);
+
+        mIDUsuario = (int)getIntent().getSerializableExtra("IdUsuario");
+    }
+
+    public void apagaConta(View view){
+
+        new AlertDialog.Builder(ActivityCustomizarLayout.this)
+                .setTitle("Apagar Conta")
+                .setMessage("Tem certeza que deseja apagar a sua conta?")
+
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        try{
+                            SQLiteDatabase myDatabase = getApplicationContext().openOrCreateDatabase("Schema",MODE_PRIVATE,null);
+                            myDatabase.execSQL("DELETE FROM usuario WHERE id = "+mIDUsuario);
+                            myDatabase.close();
+
+                            Intent i = getBaseContext().getPackageManager()
+                                    .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+                            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(i);
+
+                        }catch (Exception e){
+                            Log.i("ERROOOR",e.getMessage());
+                        }
+
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+
+    }
+
+    public void alteraSenha(View view){
+
+
+
+    }
+
+    public void reiniciaConf(View view){
+
+        new AlertDialog.Builder(ActivityCustomizarLayout.this)
+                .setTitle("Reiniciar configurações")
+                .setMessage("Tem certeza que deseja reiniciar as configurações?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // continue with delete
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+
     }
 }
