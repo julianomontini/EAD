@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -31,6 +32,7 @@ public class AdapterListaExercicios extends ArrayAdapter<EncapsulaDadosExercicio
 
 
         TextView numeroEx = (TextView)customView.findViewById(R.id.numero_lista_exercicio);
+        ImageView statusEx = (ImageView)customView.findViewById(R.id.status_lista_exercicio);
         numeroEx.setText("Exercício " + exercicio.getNumeroQuestao());
 
         try{
@@ -46,10 +48,10 @@ public class AdapterListaExercicios extends ArrayAdapter<EncapsulaDadosExercicio
                 status = c.getInt(indexStatus);
                 switch (status){
                     case 1:
-                        numeroEx.setTextColor(ContextCompat.getColor(getContext(),R.color.green));
+                        statusEx.setBackground(getContext().getDrawable(R.drawable.correct128));
                         break;
                     case 2:
-                        numeroEx.setTextColor(ContextCompat.getColor(getContext(),R.color.red));
+                        statusEx.setBackground(getContext().getDrawable(R.drawable.cancelar));
                         break;
                 }
 
