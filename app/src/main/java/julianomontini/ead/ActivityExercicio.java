@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -52,6 +53,43 @@ public class ActivityExercicio extends AppCompatActivity {
         mOpc2.setText(mInformacoes.getOpc2());
         mOpc3.setText(mInformacoes.getOpc3());
         mOpc4.setText(mInformacoes.getOpc4());
+
+        try{
+            SQLiteDatabase myDatabase = this.openOrCreateDatabase("Schema", MODE_PRIVATE, null);
+
+            Cursor c = myDatabase.rawQuery("SELECT respondida FROM usuario_exerc WHERE n_aluno = "+mIDUsuario+" AND n_curso = "+mInformacoes.getIDCurso()+" AND n_exerc = " + mInformacoes.getId(),null);
+
+            int indexRespondida;
+            indexRespondida = c.getColumnIndex("respondida");
+
+            if(!c.isAfterLast()){
+
+                c.moveToFirst();
+                int respondida = c.getInt(indexRespondida);
+                switch (respondida){
+
+                    case 1:
+                        mOpc1.setChecked(true);
+                        break;
+                    case 2:
+                        mOpc2.setChecked(true);
+                        break;
+                    case 3:
+                        mOpc3.setChecked(true);
+                        break;
+                    case 4:
+                        mOpc4.setChecked(true);
+                        break;
+
+                }
+            }
+        }catch (Exception e){
+
+            Log.i("ERROOOOOO",e.getMessage());
+
+        }
+
+
     }
 
     public void avancaExerc(View view){
@@ -67,7 +105,7 @@ public class ActivityExercicio extends AppCompatActivity {
 
             new AlertDialog.Builder(ActivityExercicio.this)
                     .setTitle("Aviso")
-                    .setMessage("Esse é o primeiro exercício")
+                    .setMessage("Esse é o ultimo exercício")
 
                     .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
@@ -139,7 +177,7 @@ public class ActivityExercicio extends AppCompatActivity {
         }
 
         myDatabase.execSQL("INSERT OR REPLACE INTO usuario_exerc VALUES(" +
-                mIDUsuario +"," +mInformacoes.getIDCurso()+"," + mInformacoes.getId()+","+ status +")");
+                mIDUsuario +"," +mInformacoes.getIDCurso()+"," + mInformacoes.getId()+","+ status + "," + marcada +")");
 
         Log.i("RESULTADOOOO","Usuario: " + mIDUsuario + " Curso: " + mInformacoes.getIDCurso() + " Numero ex: "+mInformacoes.getId() +" Status: " +status);
 

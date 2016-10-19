@@ -118,7 +118,7 @@ public class ActivityCursosCadastrados extends AppCompatActivity {
                     String opc4 = d.getString(indexOpc4);
                     int certa = d.getInt(indexCerta);
 
-                    exercicios.add(new EncapsulaDadosExercicio(i,questao,opc1,opc2,opc3,opc4,idEx,certa,mIdCurso));
+                    exercicios.add(new EncapsulaDadosExercicio(i,questao,opc1,opc2,opc3,opc4,idEx,certa,mIdCurso,mIdUsuario));
 
                     d.moveToNext();
                     i=i+1;

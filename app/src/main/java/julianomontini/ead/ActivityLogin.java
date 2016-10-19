@@ -108,9 +108,6 @@ public class ActivityLogin extends AppCompatActivity{
             myDatabase.execSQL("DROP TABLE usuario_curso");
             myDatabase.execSQL("DROP TABLE usuario_exerc");
 
-            Cursor c = myDatabase.rawQuery("SELECT * FROM usuario_exerc",null);
-
-            Log.i("RESULTADOO", String.valueOf(c.getCount()));
 
             myDatabase.close();
 
@@ -146,6 +143,7 @@ public class ActivityLogin extends AppCompatActivity{
                     "n_curso INT, " +
                     "n_exerc INT," +
                     "status INT," +
+                    "respondida INT,"+
                     "UNIQUE(n_aluno,n_curso,n_exerc))");
 
             myDatabase.close();

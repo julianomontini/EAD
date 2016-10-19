@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class EncapsulaDadosExercicio implements Serializable{
 
-    public EncapsulaDadosExercicio(int numeroQuestao, String questao, String opc1, String opc2, String opc3, String opc4, int Id,int certa,int numeroCurso){
+    public EncapsulaDadosExercicio(int numeroQuestao, String questao, String opc1, String opc2, String opc3, String opc4, int Id,int certa,int numeroCurso, int IDUsuario){
 
         setNumeroQuestao(numeroQuestao);
         setQuestao(questao);
@@ -15,11 +15,12 @@ public class EncapsulaDadosExercicio implements Serializable{
         setId(Id);
         setCerta(certa);
         setIDCurso(numeroCurso);
+        setIDUsuario(IDUsuario);
     }
 
-    private int mIcone,mId,mCerta;
+    private int mId,mCerta;
     private Integer mNumeroQuestao;
-    private int IDCurso;
+    private int IDCurso,IDUsuario;
     private String mQuestao, mOpc1, mOpc2, mOpc3, mOpc4;
 
     public String getNumeroQuestao() {
@@ -92,5 +93,13 @@ public class EncapsulaDadosExercicio implements Serializable{
 
     public void setIDCurso(int IDCurso) {
         this.IDCurso = IDCurso;
+    }
+
+    public int getIDUsuario() {
+        return IDUsuario;
+    }
+
+    public void setIDUsuario(int IDUsuario) {
+        this.IDUsuario = IDUsuario;
     }
 }

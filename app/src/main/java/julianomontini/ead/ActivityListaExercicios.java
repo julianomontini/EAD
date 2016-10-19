@@ -24,6 +24,11 @@ public class ActivityListaExercicios extends AppCompatActivity {
         mIDUsuario = (int) getIntent().getSerializableExtra("IDusuario");
 
         mInformacoes = (List<EncapsulaDadosExercicio>) getIntent().getSerializableExtra("lista_exercicios");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         criarLista();
     }
