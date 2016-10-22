@@ -1,37 +1,21 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- DEFAULT APP -->
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/md_black_1000</item>
-        <item name="android:navigationBarColor">@color/colorPrimary</item>
-        <item name="android:statusBarColor">@color/colorPrimary</item>
-        <item name="android:windowBackground">?attr/colorPrimary</item>
-        <item name="android:colorBackground">@color/colorPrimary</item>
-        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:buttonStyle">@style/ButtonStyleGlobal</item>
+        <item name="android:textViewStyle">@style/TextGlobal</item>
+        <item name="editTextStyle">@style/InputStyleGlobal</item>
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
         <item name="android:textColorSecondary">@color/white</item>
-        <item name="android:textColorSecondaryInverse">@color/white</item>
-        <item name="android:textColorPrimary">@color/black</item>
-    </style>
-
-    <style name="AppThemeGreen" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/teal</item>
-        <item name="colorPrimaryDark">@color/md_teal_700</item>
-        <item name="colorAccent">@color/md_amber_500</item>
-        <item name="android:navigationBarColor">@color/teal</item>
-        <item name="android:statusBarColor">@color/teal</item>
-    </style>
-
-    <style name="AppThemeGrey" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/md_blue_grey_500</item>
-        <item name="colorPrimaryDark">@color/md_blue_grey_700</item>
-        <item name="colorAccent">@color/md_green_500</item>
-        <item name="android:navigationBarColor">@color/md_blue_grey_500</item>
-        <item name="android:statusBarColor">@color/md_blue_grey_500</item>
+        <item name="android:textColorSecondaryInverse">@color/md_white_1000</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:statusBarColor">?android:attr/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:radioButtonStyle">@style/RadioStyle</item>
+        <item name="android:checkboxStyle">@style/checkBoxStyle</item>
     </style>
 
     <style name="ButtonStyleGlobal">
@@ -40,25 +24,12 @@
         <item name="android:textColorHint">@color/white</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">30dp</item>
-    </style>
-    <style name="ButtonStyleGlobalGreen">
-        <item name="android:textAlignment">center</item>
-        <item name="android:background">@drawable/press_animation</item>
-        <item name="android:textColorHint">@color/white</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">30dp</item>
-    </style>
-
-    <style name="ButtonStyleGlobalMain">
-        <item name="android:textAlignment">center</item>
-        <item name="android:background">@drawable/press_animation</item>
-        <item name="android:textColorHint">@color/white</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">30dp</item>
-        <item name="android:padding">7dp</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="InputStyleGlobal">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
         <item name="android:textAlignment">center</item>
         <item name="android:background">@drawable/layout_input</item>
         <item name="android:textColorHint">@color/white</item>
@@ -67,38 +38,96 @@
         <item name="android:inputType">text</item>
     </style>
 
-    <style name="InputStyleGlobalLand">
-        <item name="android:textAlignment">center</item>
-        <item name="android:background">@drawable/layout_input</item>
-        <item name="android:textColorHint">@color/white</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">40dp</item>
-        <item name="android:inputType">text</item>
-    </style>
 
     <style name="TextGlobal">
+        <item name="android:button">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
         <item name="android:textSize">30dp</item>
         <item name="android:layout_marginBottom">20dp</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="TextGlobalLand">
-        <item name="android:textSize">40dp</item>
+    <style name="checkBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:colorAccent">@color/teal</item>
+        <item name="android:textSize">30dp</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="TextHeader">
-        <item name="android:textSize">35dp</item>
+    <style name="RadioStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:colorAccent">@color/teal</item>
+        <item name="android:textSize">30dp</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="TextHeaderLand">
-        <item name="android:textSize">70dp</item>
-        <item name="android:textColor">@color/white</item>
+    <!-- GREEN APP -->
+
+    <style name="AppThemeGreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/teal</item>
+        <item name="colorPrimaryDark">@color/md_teal_700</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="android:buttonStyle">@style/ButtonStyleGlobalGreen</item>
+        <item name="android:textViewStyle">@style/TextGlobal</item>
+        <item name="editTextStyle">@style/InputStyleGlobalGreen</item>
+        <item name="android:navigationBarColor">@color/teal</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColorSecondaryInverse">@color/md_white_1000</item>
+        <item name="android:colorBackground">@color/teal</item>
+        <item name="android:statusBarColor">@color/teal</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:radioButtonStyle">@style/RadioStyleGreen</item>
+        <item name="android:checkboxStyle">@style/CheckBoxStyleGreen</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="InputStyleGlobalGreen" parent="InputStyleGlobal">
+        <item name="android:background">@drawable/layout_input_green</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="ButtonStyleGlobalGreen" parent="ButtonStyleGlobal">
+        <item name="android:background">@drawable/press_animation_green</item>
+    </style>
+
+    <style name="RadioStyleGreen" parent="RadioStyle">
+        <item name="android:colorAccent">@color/md_amber_500</item>
+    </style>
+
+    <style name="CheckBoxStyleGreen" parent="checkBoxStyle">
+        <item name="android:colorAccent">@color/md_amber_500</item>
+    </style>
+
+    <!-- GREY APP -->
+
+    <style name="AppThemeGrey" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/md_blue_grey_500</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_700</item>
+        <item name="colorAccent">@color/md_green_500</item>
+        <item name="android:navigationBarColor">@color/md_blue_grey_500</item>
+        <item name="android:statusBarColor">@color/md_blue_grey_500</item>
+        <item name="android:buttonStyle">@style/ButtonStyleGlobalGrey</item>
+        <item name="android:textViewStyle">@style/TextGlobal</item>
+        <item name="editTextStyle">@style/InputStyleGlobalGrey</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColorSecondaryInverse">@color/md_white_1000</item>
+        <item name="android:colorBackground">@color/md_blue_grey_500</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:radioButtonStyle">@style/RadioStyleGrey</item>
+        <item name="android:checkboxStyle">@style/CheckBoxStyleGrey</item>
+    </style>
+
+    <style name="InputStyleGlobalGrey" parent="InputStyleGlobal">
+        <item name="android:background">@drawable/layout_input_grey</item>
+    </style>
+
+    <style name="ButtonStyleGlobalGrey" parent="ButtonStyleGlobal">
+        <item name="android:background">@drawable/press_animation_grey</item>
+    </style>
+
+    <style name="RadioStyleGrey" parent="RadioStyle">
+        <item name="android:colorAccent">@color/md_blue_grey_500</item>
+    </style>
+
+    <style name="CheckBoxStyleGrey" parent="checkBoxStyle">
+        <item name="android:colorAccent">@color/md_blue_grey_500</item>
+    </style>
 
 </resources>

@@ -18,6 +18,7 @@ public class ActivityListaExercicios extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.setTheme(ClassChangeTheme.getTheme(this));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_exercicios);
 

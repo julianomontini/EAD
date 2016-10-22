@@ -14,8 +14,7 @@
             android:id="@+id/numero_lista_exercicio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Exercicio 1"
-            style="@style/TextGlobal"/>
+            android:text="Exercicio 1"/>
         <ImageView
             android:layout_marginLeft="10dp"
             android:layout_width="40dp"

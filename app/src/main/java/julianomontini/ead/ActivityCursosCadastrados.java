@@ -25,6 +25,7 @@ public class ActivityCursosCadastrados extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.setTheme(ClassChangeTheme.getTheme(this));
         setContentView(R.layout.activity_cadastrados);
 
         mIdUsuario = (int)getIntent().getSerializableExtra("IdUsuario");

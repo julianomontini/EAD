@@ -1,18 +1,12 @@
 package julianomontini.ead;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,8 +15,8 @@ public class ActivityLogin extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.setTheme(ClassChangeTheme.getTheme(this));
         setContentView(R.layout.activity_login);
-        super.setTheme(R.style.AppThemeGreen);
     }
 
     @Override
@@ -122,10 +116,6 @@ public class ActivityLogin extends AppCompatActivity{
     }
 
     private void inicializarDados() {
-
-        ViewGroup scrollView = (ViewGroup) findViewById(R.id.ScrollLogin);
-        scrollView.setBackground(ResourcesCompat.getDrawable(getResources(),R.color.md_teal_700,null));
-        ClassChangeStyle.recursiveLoopChildren(scrollView,ActivityLogin.this,2);
         inicializaCadastro();
         inicializaCursos();
         inicializaExercicios();

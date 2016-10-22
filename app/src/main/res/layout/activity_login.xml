@@ -11,7 +11,6 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -40,7 +39,6 @@
 
             <EditText
                 android:id="@+id/email_login"
-                style="@style/InputStyleGlobal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/e_mail"
@@ -49,7 +47,6 @@
 
             <EditText
                 android:id="@+id/senha_login"
-                style="@style/InputStyleGlobal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -60,12 +57,12 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/TextGlobal"
                 android:layout_marginTop="30dp"
-                android:text="Lembrar usuário"/>
+                android:text="Lembrar usuário"
+                android:textColor="@color/white"
+                android:checked="false" />
 
             <Button
-                style="@style/ButtonStyleGlobal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -76,7 +73,6 @@
 
 
             <TextView
-                style="@style/TextGlobal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -86,7 +82,6 @@
                 android:textAlignment="center"/>
 
             <TextView
-                style="@style/TextGlobal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -99,7 +94,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXEC SQL"
-                android:onClick="execSQL"/>
+                android:onClick="execSQL"
+                android:visibility="invisible" />
 
         </LinearLayout>
 

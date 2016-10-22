@@ -2,8 +2,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +12,6 @@
 
         <TextView
             android:id="@+id/texto_exercicios"
-            style="@style/TextHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Exercícios"
@@ -26,7 +24,6 @@
 
 
             <TextView
-                style="@style/TextHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
@@ -34,7 +31,6 @@
                 android:text="Questão "/>
             <TextView
                 android:id="@+id/numero_exercicio"
-                style="@style/TextHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
@@ -45,7 +41,6 @@
 
         <TextView
             android:id="@+id/questao_exercicio"
-            style="@style/TextGlobal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -57,28 +52,24 @@
 
             <RadioButton
                 android:id="@+id/questao_1"
-                style="@style/TextGlobal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="A apropriação de tecnologia avançada"/>
 
             <RadioButton
                 android:id="@+id/questao_2"
-                style="@style/TextGlobal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Surgimento de atividades e serviços"/>
 
             <RadioButton
                 android:id="@+id/questao_3"
-                style="@style/TextGlobal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Diversificação do mercado urbano"/>
 
             <RadioButton
                 android:id="@+id/questao_4"
-                style="@style/TextGlobal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Deslocamento da população rural para as cidades"/>

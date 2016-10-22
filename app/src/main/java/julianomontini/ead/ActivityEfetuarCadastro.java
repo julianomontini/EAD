@@ -17,6 +17,7 @@ public class ActivityEfetuarCadastro extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.setTheme(ClassChangeTheme.getTheme(this));
         setContentView(R.layout.activity_cadastro);
 
 

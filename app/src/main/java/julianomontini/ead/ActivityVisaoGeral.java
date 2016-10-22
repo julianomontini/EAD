@@ -12,6 +12,7 @@ public class ActivityVisaoGeral extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.setTheme(ClassChangeTheme.getTheme(this));
         setContentView(R.layout.activity_visao_geral);
 
         mIdUsuario = (int)getIntent().getSerializableExtra("IdUsuario");

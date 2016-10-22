@@ -20,6 +20,7 @@ public class ActivityInformacoesCurso extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.setTheme(ClassChangeTheme.getTheme(this));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_curso);
         mInformacoes = (EncapsulaInfoCurso) getIntent().getSerializableExtra("id");

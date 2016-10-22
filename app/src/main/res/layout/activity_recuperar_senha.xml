@@ -7,7 +7,6 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent"
-                  android:background="@color/colorPrimary"
                   android:orientation="vertical">
 
         <ImageView
@@ -26,14 +25,12 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/TextHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/esqueci_minha_senha"
                 android:textAlignment="center"/>
 
             <TextView
-                style="@style/TextGlobal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -41,7 +38,6 @@
                 android:textAlignment="center"/>
 
             <EditText
-                style="@style/InputStyleGlobal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -49,7 +45,6 @@
 
             <Button
                 android:id="@+id/campo_reset"
-                style="@style/ButtonStyleGlobal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

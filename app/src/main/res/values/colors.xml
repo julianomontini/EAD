@@ -250,7 +250,7 @@
     <color name="md_orange_200">#FFCC80</color>
     <color name="md_orange_300">#FFB74D</color>
     <color name="md_orange_400">#FFA726</color>
-    <color name="md_orange_500">#FF9800</color>
+    <color name="md_orange_500">#ff9800</color>
     <color name="md_orange_600">#FB8C00</color>
     <color name="md_orange_700">#F57C00</color>
     <color name="md_orange_800">#EF6C00</color>

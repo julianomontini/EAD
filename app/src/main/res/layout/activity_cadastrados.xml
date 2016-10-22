@@ -3,7 +3,6 @@
               android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
             android:padding="20dp">
 
     <LinearLayout
@@ -13,7 +12,6 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/TextHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cursos cadastrados"
@@ -24,7 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
-            android:divider="@color/colorPrimary"
             android:dividerHeight="15dp">
 
         </ListView>
@@ -33,7 +30,6 @@
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyleGlobal"
             android:text="Remover Cursos"
             android:nestedScrollingEnabled="true"
             android:onClick="mostrarEditar"/>

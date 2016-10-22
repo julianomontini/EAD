@@ -21,19 +21,13 @@ import java.util.Map;
 
 public class ActivityMostrarCursos extends AppCompatActivity {
 
-    Integer convert;
-    int icone;
-    String materia, descricao;
-
-    Map materias = new HashMap();
-    Map icones = new HashMap();
-    Map descricoes = new HashMap();
 
     int mIdUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.setTheme(ClassChangeTheme.getTheme(this));
         setContentView(R.layout.activity_cursos_disponiveis);
 
         mIdUsuario = (int)getIntent().getSerializableExtra("IdUsuario");

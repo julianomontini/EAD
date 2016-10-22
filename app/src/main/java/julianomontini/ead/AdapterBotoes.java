@@ -13,10 +13,12 @@ import java.util.List;
 public class AdapterBotoes extends ArrayAdapter<EncapsulaInfoCurso> {
 
 
+    Context mContext;
+
     public AdapterBotoes(Context context, List<EncapsulaInfoCurso> informacoes) {
 
-        super(context, R.layout.adapter_botoes, informacoes.toArray(new EncapsulaInfoCurso[informacoes.size()]));
-
+        super(context, ClassChangeTheme.getThemeButton(context), informacoes.toArray(new EncapsulaInfoCurso[informacoes.size()]));
+        setmContext(context);
     }
 
     @Override
@@ -24,7 +26,7 @@ public class AdapterBotoes extends ArrayAdapter<EncapsulaInfoCurso> {
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
 
-        View customView = inflater.inflate(R.layout.adapter_botoes, parent, false);
+        View customView = inflater.inflate(ClassChangeTheme.getThemeButton(mContext), parent, false);
         EncapsulaInfoCurso infos = getItem(position);
 
         ImageView imagemBotao = (ImageView) customView.findViewById(R.id.imagemBotao);
@@ -35,5 +37,13 @@ public class AdapterBotoes extends ArrayAdapter<EncapsulaInfoCurso> {
 
         return customView;
 
+    }
+
+    public void setmContext(Context context){
+        mContext = context;
+    }
+
+    public Context getmContext(){
+        return mContext;
     }
 }

@@ -18,6 +18,7 @@ public class ActivityDesempenho extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.setTheme(ClassChangeTheme.getTheme(this));
         setContentView(R.layout.activity_desempenho);
         mIDUsuario = (int) getIntent().getSerializableExtra("IDUsuario");
         criarInfos();

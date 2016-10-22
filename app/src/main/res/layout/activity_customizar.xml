@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,6 @@
                 android:src="@drawable/ic_menu_manage"/>
 
             <TextView
-                style="@style/TextHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
@@ -32,7 +31,6 @@
         </LinearLayout>
 
         <TextView
-            style="@style/TextHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -40,25 +38,26 @@
             android:textAlignment="center"/>
 
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:id="@+id/opcRad1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                style="@style/TextGlobal"
                 android:text="Azul e branco"/>
 
             <RadioButton
+                android:id="@+id/opcRad2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                style="@style/TextGlobal"
                 android:text="Verde e amarelo"/>
 
             <RadioButton
+                android:id="@+id/opcRad3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                style="@style/TextGlobal"
                 android:text="Cinza e verde"/>
 
         </RadioGroup>
@@ -67,18 +66,15 @@
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextHeader"
             android:text="Acessibilidade"/>
 
 
         <CheckBox
-            style="@style/TextGlobal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descrição em audio ao clicar"/>
 
         <CheckBox
-            style="@style/TextGlobal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descrição ao apertar e segurar"/>
@@ -87,11 +83,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Opções da conta"
-            style="@style/TextHeader"
             android:textAlignment="center"/>
 
         <Button
-            style="@style/ButtonStyleGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="salvar"
+            android:onClick="salvarConf"/>
+
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -103,7 +104,6 @@
             android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyleGlobal"
             android:onClick="alteraSenha"/>
 
 
@@ -112,7 +112,6 @@
             android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyleGlobal"
             android:onClick="apagaConta"/>
 
     </LinearLayout>

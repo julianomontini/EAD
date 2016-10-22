@@ -30,6 +30,7 @@ public class ActivityExercicio extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.setTheme(ClassChangeTheme.getTheme(this));
         setContentView(R.layout.activity_exercicios);
         mLista = (List<EncapsulaDadosExercicio>)getIntent().getSerializableExtra("lista");
         mIDUsuario = (int)getIntent().getSerializableExtra("IDUsuario");

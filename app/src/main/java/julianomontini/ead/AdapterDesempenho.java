@@ -11,9 +11,11 @@ import java.util.List;
 
 public class AdapterDesempenho extends ArrayAdapter<EncapsulaDesempenho> {
 
+    private Context mContext;
 
     public AdapterDesempenho(Context context, List<EncapsulaDesempenho> infos) {
-        super(context, R.layout.adapter_desempenho, infos.toArray(new EncapsulaDesempenho[infos.size()]));
+        super(context, ClassChangeTheme.getThemeDesempenho(context), infos.toArray(new EncapsulaDesempenho[infos.size()]));
+        setmContext(context);
     }
 
     @Override
@@ -21,7 +23,7 @@ public class AdapterDesempenho extends ArrayAdapter<EncapsulaDesempenho> {
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
 
-        View customView = inflater.inflate(R.layout.adapter_desempenho, parent, false);
+        View customView = inflater.inflate(ClassChangeTheme.getThemeDesempenho(mContext), parent, false);
         EncapsulaDesempenho infos = getItem(position);
 
         TextView nomeCurso = (TextView) customView.findViewById(R.id.desempenho_materias);
@@ -37,6 +39,12 @@ public class AdapterDesempenho extends ArrayAdapter<EncapsulaDesempenho> {
         total.setText(infos.getTotalQuestoes());
 
         return customView;
+
+    }
+
+    public void setmContext(Context context){
+
+        mContext = context;
 
     }
 }

@@ -7,8 +7,7 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:background="@color/colorPrimary"
+                  android:layout_height="wrap_content"
                   android:gravity="center_vertical"
                   android:orientation="vertical"
                   android:paddingLeft="30dp"
@@ -25,7 +24,6 @@
                 android:src="@drawable/logo"/>
 
             <TextView
-                style="@style/TextHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
@@ -36,7 +34,6 @@
 
         <EditText
             android:id="@+id/nome_cadastro"
-            style="@style/InputStyleGlobal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
@@ -44,7 +41,6 @@
 
         <EditText
             android:id="@+id/email_cadastro"
-            style="@style/InputStyleGlobal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -53,7 +49,6 @@
 
         <EditText
             android:id="@+id/senha_cadastro"
-            style="@style/InputStyleGlobal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -62,7 +57,6 @@
 
         <EditText
             android:id="@+id/conf_senha"
-            style="@style/InputStyleGlobal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -71,7 +65,6 @@
 
         <EditText
             android:id="@+id/telefone_cadastro"
-            style="@style/InputStyleGlobal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -79,7 +72,6 @@
 
         <EditText
             android:id="@+id/cpf_cadastro"
-            style="@style/InputStyleGlobal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -94,9 +86,9 @@
             <CheckBox
                 android:id="@+id/check_cadastro"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
             <TextView
-                style="@style/TextGlobal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/termos_de_uso_e_pol_tica_de_privacidade"/>
@@ -104,7 +96,6 @@
         </LinearLayout>
 
         <Button
-            style="@style/ButtonStyleGlobal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
