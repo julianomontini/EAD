@@ -41,7 +41,7 @@ public class ActivityCursosCadastrados extends AppCompatActivity {
 
     public void mostrarEditar(View view){
 
-        Toast.makeText(ActivityCursosCadastrados.this,"Aperte e segure no curso para remover",Toast.LENGTH_LONG).show();
+        DisplayAlert.neutralDialog(this,"Aperte e segure em cima do curso para remover");
 
     }
 

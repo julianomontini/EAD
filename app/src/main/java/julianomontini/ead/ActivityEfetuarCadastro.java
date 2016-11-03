@@ -4,7 +4,9 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +22,23 @@ public class ActivityEfetuarCadastro extends AppCompatActivity {
         super.setTheme(ClassChangeTheme.getTheme(this));
         setContentView(R.layout.activity_cadastro);
 
+
+        TextView termosCadastro = (TextView)findViewById(R.id.termosCadastro);
+
+        termosCadastro.setFocusableInTouchMode(true);
+        termosCadastro.setFocusable(true);
+        termosCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DisplayAlert.neutralDialog(ActivityEfetuarCadastro.this, "O presente documento apresenta as definições e regras de utilização da Plataforma de Sistema Virtual de Aprendizagem para idosos.\n" +
+                        "A Plataforma integra um conjunto de ferramentas educacionais, disponíveis à utilização de alunos vinculados e devidamente permissionados no sistema.\n" +
+                        "Ao acessar a Plataforma Virtual, você declara estar de acordo com as regras de uso do sistema, reconhecendo como verídicas as informações declaradas. Da mesma maneira, reconhece as obrigações de propriedade e guarda de seus dados, sendo esse sigiloso e intransferível.  \n" +
+                        "Sob circunstância alguma, seus dados, assim como sua senha deve ser transferida a terceiros. Casos de violação as regras de acesso, estão elegíveis as penalidades da Política de Segurança desta Plataforma. \n" +
+                        "De maneira geral, informações do Sistema serão salvas apenas para o funcionamento deste aplicativo, além de divulgação de melhorias ao próprio Sistema. \n" +
+                        "Ao realizar o cadastro, todas as informações serão salvas em banco de dados, recuperadas exclusivamente em consultas, relatórios e acesso ao aplicativo.\n" +
+                        "Ao término do cadastramento, realize a troca de sua senha, atentando-se aos critérios de complexidade (4 caracteres, letras maiúsculas e minúsculas, caráter especial e números)");
+            }
+        });
 
     }
 
@@ -90,7 +109,7 @@ public class ActivityEfetuarCadastro extends AppCompatActivity {
 
                     .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+
                         }
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert)
@@ -101,12 +120,12 @@ public class ActivityEfetuarCadastro extends AppCompatActivity {
         catch (Exception e) {
 
             new AlertDialog.Builder(ActivityEfetuarCadastro.this)
-                    .setTitle("Erro")
-                    .setMessage("O erro: "+ e.getMessage() + " ocorreu, favor contatar o administrador")
+                    .setTitle("Aviso")
+                    .setMessage(e.getMessage())
 
                     .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+
                         }
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert)

@@ -16,7 +16,7 @@
     <string name="confirmar">Confirmar</string>
     <string name="telefone_celular">Telefone/Celular</string>
     <string name="cpf" translatable="false">CPF</string>
-    <string name="termos_de_uso_e_pol_tica_de_privacidade">Termos de uso e política de privacidade</string>
+    <string name="termos_de_uso_e_pol_tica_de_privacidade"><u>Termos de uso e política de privacidade</u></string>
     <string name="insira_seu_email_abaixo">Insira seu email abaixo para recuperar a senha</string>
     <string name="para_reiniciar_a_senha">para reiniciar a senha</string>
     <string name="enviar">Enviar</string>

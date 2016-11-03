@@ -22,7 +22,6 @@ public class ActivityLogin extends AppCompatActivity{
     @Override
     protected void onResume() {
         super.onResume();
-
         inicializarDados();
     }
 
@@ -98,7 +97,6 @@ public class ActivityLogin extends AppCompatActivity{
 
             SQLiteDatabase myDatabase = this.openOrCreateDatabase("Schema", MODE_PRIVATE, null);
 
-            //myDatabase.execSQL("DROP TABLE usuario");
             myDatabase.execSQL("DROP TABLE usuario_curso");
             myDatabase.execSQL("DROP TABLE usuario_exerc");
 
