@@ -69,6 +69,7 @@ public class ActivityCustomizarLayout extends FragmentActivity {
     public void alteraSenha(View view){
 
         Intent i = new Intent(this,ActivityAlterarSenha.class);
+        i.putExtra("IDUsuario",mIDUsuario);
         startActivity(i);
 
     }

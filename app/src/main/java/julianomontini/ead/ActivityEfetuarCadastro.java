@@ -2,6 +2,7 @@ package julianomontini.ead;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Random;
 
 public class ActivityEfetuarCadastro extends AppCompatActivity {
 
@@ -53,7 +56,6 @@ public class ActivityEfetuarCadastro extends AppCompatActivity {
         TextView cpf = (TextView) findViewById(R.id.cpf_cadastro);
         CheckBox check = (CheckBox) findViewById(R.id.check_cadastro);
 
-
         try {
 
             //Tenta instanciar a classe aluno com os dados passados na tela
@@ -71,33 +73,11 @@ public class ActivityEfetuarCadastro extends AppCompatActivity {
 
             }
 
-            //Abre a conexao com Schema
-            SQLiteDatabase myDatabase = this.openOrCreateDatabase("Schema",MODE_PRIVATE,null);
+            Intent i = new Intent(ActivityEfetuarCadastro.this,ActivityConfirmaCadastro.class);
+            i.putExtra("DadosAluno",aluno);
 
+            startActivity(i);
 
-            //Insere na tabela os dados da tela de cadastro
-            myDatabase.execSQL("INSERT INTO usuario(nome, email, senha, telefone, cpf) VALUES("
-                    + "'" + aluno.getNome()  +"'" + ","
-                    + "'" + aluno.getEmail() +"'" + ","
-                    + "'" + aluno.getSenha() +"'" + ","
-                    + "'" + aluno.getTel()   +"'" + ","
-                    + "'" + aluno.getCpf()   +"'"
-                    + ")");
-
-            //Fecha a conexao com o banco de dados
-            myDatabase.close();
-
-            new AlertDialog.Builder(ActivityEfetuarCadastro.this)
-                    .setTitle("Sucesso")
-                    .setMessage("Cadastro efetuado com sucesso")
-
-                    .setNeutralButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
 
         }
         //Trata exception de constraint

@@ -1,8 +1,9 @@
 package julianomontini.ead;
 
+import java.io.Serializable;
 import java.util.regex.Pattern;
 
-public class ClassDadosAluno {
+public class ClassDadosAluno implements Serializable{
 
     private String mNome;
     private String mEmail;
